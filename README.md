@@ -1,5 +1,18 @@
 # REL: Radboud Entity Linker
 
+
+This is a simple fork from (informagi/REL)[https://github.com/informagi/REL].
+The only real change from the parent repo is that I edited the MentionDetection class in the mention_detection.py file. 
+This edit changed attributes of the entity objects used in the function "find_mentions()" from starting_pos,ending_pos --> starting_position,ending_postion. As the former set of attribute names would lead to an Error:
+
+`AttributeError: 'Span' object has no attribute 'start_pos'`
+
+Changing those names fixes the issue. As of 05/05/2022 the issue has not been fixed in the parent repo. If you're reading this much later hopefully it has been resolved.
+
+
+
+
+
 ![API status](https://img.shields.io/endpoint?label=status&url=https%3A%2F%2Frel.cs.ru.nl%2Fapi)
 ![build](https://github.com/informagi/REL/workflows/build/badge.svg)
 
@@ -99,7 +112,7 @@ To run the API locally, use the same commands as mentioned in the previous secti
 ##  Option 2: Installation from source code
 Run the following command in a terminal to install REL:
 ```
-pip install git+https://github.com/informagi/REL
+pip install git+https://github.com/Jordan-M-Young/REL
 ```
 You will also need to manually download the files described in the next section.
 
