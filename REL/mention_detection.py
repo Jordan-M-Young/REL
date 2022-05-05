@@ -146,8 +146,8 @@ class MentionDetection(MentionDetectionBase):
                 ):
                     text, start_pos, end_pos, conf, tag = (
                         entity.text,
-                        entity.start_pos,
-                        entity.end_pos,
+                        entity.start_position,
+                        entity.end_position,
                         entity.score,
                         entity.tag,
                     )
